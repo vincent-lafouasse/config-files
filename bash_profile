@@ -36,7 +36,7 @@ export PS1="$C_PURPLE\A $C_CYAN\w $C_DEFAULT\$ "
 
 
 # path
-export PATH="$PATH:/Users/vincentlafouasse/bin"
+export PATH="$PATH:$HOME/bin"
 
 # aliases
 
@@ -45,8 +45,8 @@ alias lsd='ls -d */'
 # exercism aliases
 
 alias exer_jl_open='atom README.md runtests.jl $(basename $(pwd)).jl'
-alias exer_py_open='~/dev/bash/exer_py_open.sh'
-alias exer_py_test='~/dev/bash/exer_py_test.sh'
+alias exer_py_open='$HOME/dev/bash/exer_py_open.sh'
+alias exer_py_test='$HOME/dev/bash/exer_py_test.sh'
 
 
 # pyenv : python

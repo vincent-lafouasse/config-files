@@ -24,14 +24,14 @@ set noshowmode
 set laststatus=2
 
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=$HOME/.vim/undodir
 set undofile
 set incsearch
 
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('$HOME/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'mbbill/undotree'

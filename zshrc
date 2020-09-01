@@ -1,11 +1,11 @@
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH="$PATH:/Users/vincentlafouasse/bin" 
+# export PATH="$PATH:$HOME/bin" 
 
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/vincentlafouasse/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # alias
 alias dl=youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
@@ -53,12 +53,12 @@ bindkey -v '^?' backward-delete-char
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate $HOME/.zshrc"
+# alias ohmyzsh="mate $HOME/.oh-my-zsh"
 alias mv="mv -v"
 
-source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source /Users/vincentlafouasse/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
