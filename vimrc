@@ -5,9 +5,9 @@ set smartindent
 set expandtab
 set noswapfile
 
-" Always wrap long lines:
 set wrap
 
+set backspace=indent,eol,start
 colo default
 syntax on
 set ts=4
@@ -34,9 +34,13 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 call plug#begin('$HOME/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
-Plug 'mbbill/undotree'
 Plug 'itchyny/lightline.vim'
+
+Plug 'mbbill/undotree'
+Plug 'vimwiki/vimwiki'
+
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'cespare/vim-toml'
 
 call plug#end()
 

@@ -9,6 +9,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # alias
 alias dl=youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+alias mv="mv -v"
+alias m2="cd $HOME/Chem/M2/"
+alias emacs='emacs -nw'
 
 ### PLUGINS
 plugins=(
@@ -55,10 +58,10 @@ bindkey -v '^?' backward-delete-char
 # Example aliases
 # alias zshconfig="mate $HOME/.zshrc"
 # alias ohmyzsh="mate $HOME/.oh-my-zsh"
-alias mv="mv -v"
 
 source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
 [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f "/Users/vincentlafouasse/.ghcup/env" ] && source "/Users/vincentlafouasse/.ghcup/env" # ghcup-env
