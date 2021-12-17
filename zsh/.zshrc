@@ -12,6 +12,8 @@ alias dl=youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
 alias mv="mv -v"
 alias m2="cd $HOME/Chem/M2/"
 alias emacs='emacs -nw'
+alias please='sudo'
+alias fucking='sudo'
 
 ### PLUGINS
 plugins=(
