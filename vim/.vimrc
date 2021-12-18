@@ -38,7 +38,7 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'mbbill/undotree'
 Plug 'vimwiki/vimwiki'
-
+Plug 'vim-test/vim-test'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'cespare/vim-toml'
 
