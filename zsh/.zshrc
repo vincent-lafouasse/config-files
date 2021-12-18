@@ -14,6 +14,7 @@ alias m2="cd $HOME/pro/mochi2"
 alias emacs='emacs -nw'
 alias please='sudo'
 alias fucking='sudo'
+alias vim='nvim'
 
 ### PLUGINS
 plugins=(
