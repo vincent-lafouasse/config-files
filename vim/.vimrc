@@ -35,7 +35,7 @@ call plug#begin('$HOME/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
-
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'mbbill/undotree'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-test/vim-test'
