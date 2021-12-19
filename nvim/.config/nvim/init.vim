@@ -41,8 +41,13 @@ Plug 'vimwiki/vimwiki'
 Plug 'vim-test/vim-test'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'cespare/vim-toml'
+Plug 'luochen1990/rainbow'
+Plug 'honza/vim-snippets'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
+
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 
 let g:lightline = {
       \ 'colorscheme': 'jellybeans',
