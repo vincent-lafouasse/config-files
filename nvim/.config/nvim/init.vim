@@ -13,11 +13,11 @@ syntax on
 set ts=4
 set sts=4
 set sw=0
-:set mouse=a
-:map <F2> :let @/=""
-:map <F3> :set nonumber
-:map <F4> :set number
-:map <F5> :w !sudo tee %
+set mouse=a
+map <F2> :let @/=""
+map <F3> :set nonumber
+map <F4> :set number
+map <F5> :w !sudo tee %
 
 set noshowmode
 
