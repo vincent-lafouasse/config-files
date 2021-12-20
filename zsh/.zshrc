@@ -22,6 +22,7 @@ alias emacs='emacs -nw'
 alias please='sudo'
 alias fucking='sudo'
 alias vim='nvim'
+alias g='git'
 
 ### PLUGINS
 plugins=(
