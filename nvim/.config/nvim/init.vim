@@ -44,6 +44,9 @@ Plug 'cespare/vim-toml'
 Plug 'luochen1990/rainbow'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+Plug 'cacharle/c_formatter_42.vim'
 
 call plug#end()
 
