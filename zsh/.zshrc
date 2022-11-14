@@ -23,6 +23,7 @@ alias please='sudo'
 alias fucking='sudo'
 alias vim='nvim'
 alias g='git'
+alias mp3dl='youtube-dl --extract-audio --audio-format mp3'
 
 ### PLUGINS
 plugins=(
