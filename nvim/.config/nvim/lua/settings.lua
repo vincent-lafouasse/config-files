@@ -21,11 +21,18 @@ set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 ]], false);
 
+-- tab width per language
+vim.api.nvim_exec([[
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+]], false);
+
 -- misc
 vim.o.mouse = 'a'
 vim.o.wrap = true
 vim.o.errorbells = false
 vim.o.swapfile = false
+
+-- -- PLUGIN SETTINGS
 
 -- colorscheme + statusline
 vim.o.termguicolors = true
