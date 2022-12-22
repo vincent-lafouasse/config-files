@@ -24,6 +24,14 @@ require('packer').startup(function(use)
 	-- rainbow parenthesis
 	use 'luochen1990/rainbow'
 
+	-- floating term
+	use 'voldikss/vim-floaterm'
+
+	-- deal with bracket pairs etc
+	use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+}
 
   if install_plugins then
     require('packer').sync()
