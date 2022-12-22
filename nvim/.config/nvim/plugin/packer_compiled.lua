@@ -88,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  rainbow = {
+    loaded = true,
+    path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/rainbow",
+    url = "https://github.com/luochen1990/rainbow"
   }
 }
 

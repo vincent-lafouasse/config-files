@@ -21,6 +21,10 @@ require('packer').startup(function(use)
   use 'morhetz/gruvbox'
 	use 'itchyny/lightline.vim'
 
+	-- rainbow parenthesis
+	use 'luochen1990/rainbow'
+
+
   if install_plugins then
     require('packer').sync()
   end
