@@ -28,6 +28,11 @@ require('packer').startup(function(use)
     -- floating term
     use 'voldikss/vim-floaterm'
 
+    -- language support
+    use 'JuliaEditorSupport/julia-vim'
+    use 'cespare/vim-toml'
+    use 'plasticboy/vim-markdown'
+
     -- deal with bracket pairs etc
     use {
         "windwp/nvim-autopairs",
