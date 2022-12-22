@@ -1,3 +1,4 @@
+-- Install packer
 local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 local install_plugins = false
 
@@ -11,10 +12,12 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
   install_plugins = true
 end
 
+-- plugins go in here
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
+	-- colorscheme + statusline
   use 'morhetz/gruvbox'
 	use 'itchyny/lightline.vim'
 
