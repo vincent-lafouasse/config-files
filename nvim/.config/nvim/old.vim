@@ -31,6 +31,8 @@ set incsearch
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+syn match cType "\<[a-zA-Z_][a-zA-Z0-9_]*_[ft]\>"
+
 call plug#begin('$HOME/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -47,6 +49,9 @@ Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'cacharle/c_formatter_42.vim'
+Plug 'pbondoer/vim-42header'
+Plug 'sheerun/vim-polyglot'
+
 
 call plug#end()
 
