@@ -16,6 +16,8 @@ require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'morhetz/gruvbox'
+	use 'itchyny/lightline.vim'
+
 
   if install_plugins then
     require('packer').sync()
@@ -26,6 +28,11 @@ if install_plugins then
   return
 end
 
+-- colorscheme + statusline
 vim.opt.termguicolors = true
+vim.g.lightline = {['colorscheme'] = 'jellybeans',}
+vim.opt.showmode = false
 
+vim.g.gruvbox_contrast_dark = "hard"
 vim.cmd('colorscheme gruvbox')
+vim.opt.background = 'dark'
