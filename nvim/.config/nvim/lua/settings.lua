@@ -2,15 +2,19 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- basic
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.smartindent = true
 vim.o.breakindent = true
+vim.o.mouse = 'a'
+vim.o.wrap = true
 
 -- tabs
 vim.o.expandtab = false
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
+vim.o.shiftround = true
 
 -- search
 vim.o.ignorecase = true
@@ -32,11 +36,10 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 ]], false);
 
 -- misc
-vim.o.mouse = 'a'
-vim.o.wrap = true
 vim.o.errorbells = false
 vim.o.swapfile = false
 vim.o.updatetime = 750
+vim.o.autoread = true
 
 -- -- PLUGIN SETTINGS
 
