@@ -1,3 +1,7 @@
+-- disable netrw to use nvim-tree instead
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.smartindent = true
@@ -45,3 +49,5 @@ vim.o.background = 'dark'
 -- rainbow parenthesis
 vim.g.rainbow_active = 1 -- set to 0 if you want to enable it later via :RainbowToggle
 
+-- nvim-tree config
+require("nvim-tree").setup()
