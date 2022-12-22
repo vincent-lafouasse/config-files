@@ -15,6 +15,11 @@ vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.gdefault = true
 
+-- column 80 highlighting
+vim.api.nvim_exec([[
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+]], false);
 
 -- misc
 vim.o.mouse = 'a'
