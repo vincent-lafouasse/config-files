@@ -32,6 +32,7 @@ vim.o.mouse = 'a'
 vim.o.wrap = true
 vim.o.errorbells = false
 vim.o.swapfile = false
+vim.o.updatetime = 750
 
 -- -- PLUGIN SETTINGS
 

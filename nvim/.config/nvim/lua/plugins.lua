@@ -67,6 +67,9 @@ require('packer').startup(function(use)
     -- floating term
     use 'voldikss/vim-floaterm'
 
+    -- git integration
+    use 'airblade/vim-gitgutter'
+
     -- language support
     use 'JuliaEditorSupport/julia-vim'
     use 'cespare/vim-toml'
