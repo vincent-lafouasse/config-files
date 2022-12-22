@@ -36,11 +36,8 @@ vim.o.swapfile = false
 
 -- colorscheme + statusline
 vim.o.termguicolors = true
-vim.g.lightline = {['colorscheme'] = 'jellybeans'}
+vim.g.lightline = {['colorscheme'] = 'rosepine'}
 vim.o.showmode = false
-
-vim.g.gruvbox_contrast_dark = "hard"
-vim.cmd('colorscheme gruvbox')
 vim.o.background = 'dark'
 
 -- rainbow parenthesis
