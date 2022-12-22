@@ -15,11 +15,12 @@ vim.o.hlsearch = false
 vim.o.incsearch = true
 vim.o.gdefault = true
 
--- column 80 highlighting
+-- column 81 and current line highlighting
 vim.api.nvim_exec([[
-set colorcolumn=80
+set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 ]], false);
+vim.o.cursorline = true
 
 -- tab width per language
 vim.api.nvim_exec([[
