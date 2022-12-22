@@ -43,7 +43,7 @@ require('packer').startup(function(use)
                     properties = {},
                     types = {}
                 },
-                color_overrides = {mocha = {base = "#0A010B"}},
+                color_overrides = {mocha = {base = "#0A010B"}}, -- a dark purple
                 highlight_overrides = {
                     mocha = function(C)
                         return {
