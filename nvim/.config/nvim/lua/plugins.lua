@@ -33,6 +33,10 @@ require('packer').startup(function(use)
     use 'cespare/vim-toml'
     use 'plasticboy/vim-markdown'
 
+    -- 42
+    use 'cacharle/c_formatter_42.vim'
+    use 'pbondoer/vim-42header'
+
     -- deal with bracket pairs etc
     use {
         "windwp/nvim-autopairs",

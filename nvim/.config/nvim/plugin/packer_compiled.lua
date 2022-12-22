@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["c_formatter_42.vim"] = {
+    loaded = true,
+    path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/c_formatter_42.vim",
+    url = "https://github.com/cacharle/c_formatter_42.vim"
+  },
   gruvbox = {
     loaded = true,
     path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -104,6 +109,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/rainbow",
     url = "https://github.com/luochen1990/rainbow"
+  },
+  ["vim-42header"] = {
+    loaded = true,
+    path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/vim-42header",
+    url = "https://github.com/pbondoer/vim-42header"
   },
   ["vim-floaterm"] = {
     loaded = true,
