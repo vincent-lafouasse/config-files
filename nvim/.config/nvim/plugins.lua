@@ -30,12 +30,3 @@ end)
 if install_plugins then
   return
 end
-
--- colorscheme + statusline
-vim.opt.termguicolors = true
-vim.g.lightline = {['colorscheme'] = 'jellybeans',}
-vim.opt.showmode = false
-
-vim.g.gruvbox_contrast_dark = "hard"
-vim.cmd('colorscheme gruvbox')
-vim.opt.background = 'dark'

@@ -22,3 +22,12 @@ vim.o.wrap = true
 vim.o.errorbells = false
 vim.o.swapfile = false
 
+
+-- colorscheme + statusline
+vim.o.termguicolors = true
+vim.g.lightline = {['colorscheme'] = 'jellybeans',}
+vim.o.showmode = false
+
+vim.g.gruvbox_contrast_dark = "hard"
+vim.cmd('colorscheme gruvbox')
+vim.o.background = 'dark'
