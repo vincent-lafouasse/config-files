@@ -88,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["semantic-highlight.vim"] = {
+    loaded = true,
+    path = "/Users/vincentlafouasse/.local/share/nvim/site/pack/packer/start/semantic-highlight.vim",
+    url = "https://github.com/jaxbot/semantic-highlight.vim"
   }
 }
 

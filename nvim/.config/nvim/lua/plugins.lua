@@ -21,6 +21,7 @@ require('packer').startup(function(use)
   use 'morhetz/gruvbox'
 	use 'itchyny/lightline.vim'
 
+	use 'jaxbot/semantic-highlight.vim'
 
   if install_plugins then
     require('packer').sync()
