@@ -10,6 +10,9 @@ vim.o.breakindent = true
 vim.o.mouse = 'a'
 vim.o.wrap = true
 
+-- fold
+vim.o.foldlevel = 1000
+
 -- tabs
 vim.o.expandtab = false
 vim.o.tabstop = 2
