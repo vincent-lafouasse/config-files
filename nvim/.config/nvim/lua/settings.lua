@@ -12,6 +12,7 @@ o.smartindent = true
 o.breakindent = true
 o.mouse = 'a'
 o.wrap = true
+o.cmdheight = 0
 
 -- fold
 o.foldlevel = 1000 -- do not fold (until i understand how folding works)
