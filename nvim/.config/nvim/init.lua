@@ -1,4 +1,5 @@
 require('plugins')
 require('settings')
 require('colorscheme-setup')
+require('treesitter-setup')
 require('mappings')
