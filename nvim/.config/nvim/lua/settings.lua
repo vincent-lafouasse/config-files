@@ -8,6 +8,7 @@ g.loaded_netrwPlugin = 1
 -- basic
 o.number = true
 o.relativenumber = true
+o.numberwidth = 2
 o.smartindent = true
 o.breakindent = true
 o.mouse = 'a'
