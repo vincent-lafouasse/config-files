@@ -11,7 +11,7 @@ vim.o.mouse = 'a'
 vim.o.wrap = true
 
 -- fold
-vim.o.foldlevel = 1000
+vim.o.foldlevel = 1000 -- do not fold (until i understand how folding works)
 
 -- tabs
 vim.o.expandtab = false
