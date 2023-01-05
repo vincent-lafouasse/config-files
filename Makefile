@@ -1,4 +1,4 @@
-TO_STOW = nvim zsh git
+TO_STOW = nvim zsh git tmux
 
 all: stow
 
