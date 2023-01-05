@@ -53,7 +53,7 @@ o.autoread = true
 
 -- colorscheme + statusline
 o.termguicolors = true
-g.lightline = {['colorscheme'] = 'rosepine'}
+g.lightline = {['colorscheme'] = 'catppuccin'}
 o.showmode = false
 o.background = 'dark'
 
