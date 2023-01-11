@@ -77,7 +77,7 @@ bindkey -v '^?' backward-delete-char
 source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-[ -f "/Users/vincentlafouasse/.ghcup/env" ] && source "/Users/vincentlafouasse/.ghcup/env" # ghcup-env
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
