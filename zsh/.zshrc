@@ -16,14 +16,16 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # alias
 alias dl=youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+alias mp3dl='youtube-dl --extract-audio --audio-format mp3'
 alias mv="mv -v"
-alias m2="cd $HOME/pro/mochi2"
 alias emacs='emacs -nw'
 alias please='sudo'
 alias fucking='sudo'
 alias vim='nvim'
+alias view='nvim -R'
 alias g='git'
-alias mp3dl='youtube-dl --extract-audio --audio-format mp3'
+alias cppcheck='cppcheck --language=c++'
+alias ccheck='cppcheck --language=c'
 
 ### PLUGINS
 plugins=(
