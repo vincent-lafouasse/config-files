@@ -1,4 +1,4 @@
-TO_STOW = nvim zsh git tmux
+TO_STOW = nvim zsh git tmux kitty
 
 all: stow
 
