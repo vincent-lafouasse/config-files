@@ -1,8 +1,6 @@
-TO_STOW = nvim zsh git tmux kitty
-
-all: stow
+TO_STOW = $(shell ls | grep -v Makefile)
 
 stow:
 	stow $(TO_STOW)
 
-.PHONY: all stow
+.PHONY: stow
