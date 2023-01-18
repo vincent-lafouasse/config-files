@@ -33,9 +33,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('$HOME/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 Plug 'itchyny/lightline.vim'
-Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 Plug 'mbbill/undotree'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-test/vim-test'
@@ -44,10 +43,7 @@ Plug 'cespare/vim-toml'
 
 call plug#end()
 
-let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
-      \ }
-
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+set termguicolors
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+colorscheme catppuccin_mocha
 set background=dark
