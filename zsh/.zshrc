@@ -15,7 +15,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH="$HOME/.oh-my-zsh"
 
 # alias
-alias dl=youtube-dl --extract-audio --audio-format mp3 -o "%(title)s.%(ext)s"
+alias dl='youtube-dl'
 alias mp3dl='youtube-dl --extract-audio --audio-format mp3'
 alias mv="mv -v"
 alias emacs='emacs -nw'
