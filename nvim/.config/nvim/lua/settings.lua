@@ -48,6 +48,9 @@ o.errorbells = false
 o.swapfile = false
 o.updatetime = 750
 o.autoread = true
+vim.api.nvim_exec([[
+autocmd BufNewFile,BufRead .clang-format set filetype=yaml
+]], false);
 
 -- -- PLUGIN SETTINGS
 
