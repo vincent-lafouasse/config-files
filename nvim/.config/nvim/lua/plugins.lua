@@ -74,8 +74,8 @@ require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-		-- syntax highlighting for kitty config file
-		use "fladson/vim-kitty"
+    -- syntax highlighting for kitty config file
+    use "fladson/vim-kitty"
 
     if install_plugins then require('packer').sync() end
 end)
