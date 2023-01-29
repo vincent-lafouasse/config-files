@@ -50,6 +50,7 @@ o.updatetime = 750
 o.autoread = true
 vim.api.nvim_exec([[
 autocmd BufNewFile,BufRead .clang-format set filetype=yaml
+autocmd BufNewFile,BufRead *.kitty set filetype=kitty
 ]], false);
 
 -- -- PLUGIN SETTINGS
