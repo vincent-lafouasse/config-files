@@ -57,6 +57,9 @@ require('packer').startup(function(use)
     use 'cespare/vim-toml'
     use 'plasticboy/vim-markdown'
 
+		-- css color preview
+    use 'ap/vim-css-color'
+
     -- parse and highlight
     use {
         'nvim-treesitter/nvim-treesitter',
