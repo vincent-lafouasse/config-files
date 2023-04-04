@@ -31,7 +31,7 @@ require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-		-- LSP
+    -- LSP
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
     use 'neovim/nvim-lspconfig'
@@ -62,7 +62,7 @@ require('packer').startup(function(use)
     use 'cespare/vim-toml'
     use 'plasticboy/vim-markdown'
 
-		-- css color preview
+    -- css color preview
     use 'ap/vim-css-color'
 
     -- parse and highlight
