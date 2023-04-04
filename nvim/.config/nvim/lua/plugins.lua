@@ -31,6 +31,11 @@ require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
+		-- LSP
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+    use 'neovim/nvim-lspconfig'
+
     -- fuzzy finder
     use {
         'nvim-telescope/telescope.nvim',
