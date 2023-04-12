@@ -31,10 +31,34 @@ require('packer').startup(function(use)
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
 
-    -- LSP
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'neovim/nvim-lspconfig'
+		-- LSP
+		use 'williamboman/mason.nvim'
+		use 'williamboman/mason-lspconfig.nvim'
+		use 'neovim/nvim-lspconfig'
+		use({
+			"j-hui/fidget.nvim",
+			config = function()
+				require("fidget").setup()
+			end
+		})
+
+		-- Autocompletion framework
+		use("hrsh7th/nvim-cmp")
+		use({
+			-- cmp LSP completion
+			"hrsh7th/cmp-nvim-lsp",
+			-- cmp Snippet completion
+			"hrsh7th/cmp-vsnip",
+			-- cmp Path completion
+			"hrsh7th/cmp-path",
+			"hrsh7th/cmp-buffer",
+			after = { "hrsh7th/nvim-cmp" },
+			requires = { "hrsh7th/nvim-cmp" },
+		})
+		-- Snippet engine
+		use('hrsh7th/vim-vsnip')
+		-- Adds extra functionality over rust analyzer
+		use("simrat39/rust-tools.nvim")
 
     -- fuzzy finder
     use {
