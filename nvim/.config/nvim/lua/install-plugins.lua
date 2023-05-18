@@ -109,6 +109,9 @@ require('packer').startup(function(use)
     -- syntax highlighting for kitty config file
     use "fladson/vim-kitty"
 
+		-- 42 header
+		use "42Paris/42header"
+
     if install_plugins then require('packer').sync() end
 end)
 
