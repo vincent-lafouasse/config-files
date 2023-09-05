@@ -33,7 +33,7 @@ require("lazy").setup({
 				ensure_installed = {
 					"c", "cpp", "make", "cmake", "rust", "java",
 					"haskell", "clojure", "ocaml",
-					"javascript", "html", "css",
+					"javascript", "typescript", "html", "css",
 					"lua", "vim", "vimdoc",
 					"csv", "json", "latex", "markdown", "toml", "tsx", "xml",
 					"yaml",
