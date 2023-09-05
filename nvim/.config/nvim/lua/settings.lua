@@ -20,8 +20,8 @@ o.foldlevel = 1000 -- do not fold (until i understand how folding works)
 
 -- tabs
 o.expandtab = false
-o.tabstop = 2
-o.shiftwidth = 2
+o.tabstop = 4
+o.shiftwidth = 4
 o.shiftround = true
 
 -- search
