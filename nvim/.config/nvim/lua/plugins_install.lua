@@ -22,4 +22,27 @@ require("lazy").setup({
 	},
 
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		config = function () 
+			local configs = require("nvim-treesitter.configs")
+
+			configs.setup({
+				ensure_installed = {
+					"c", "cpp", "make", "cmake", "rust", "java",
+					"haskell", "clojure", "ocaml",
+					"javascript", "html", "css",
+					"lua", "vim", "vimdoc",
+					"csv", "json", "latex", "markdown", "toml", "tsx", "xml",
+					"yaml",
+					"diff", "doxygen", "gitignore",
+				},
+				sync_install = false,
+				highlight = { enable = true },
+				indent = { enable = true },  
+			})
+		end
+	}
 })
