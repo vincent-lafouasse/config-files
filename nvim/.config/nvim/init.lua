@@ -1,4 +1,5 @@
 require("settings")
-require("plugins_install")
-require("colorscheme")
 require("remap");
+require("plugins_install")
+require("telescope_setup")
+require("colorscheme")
