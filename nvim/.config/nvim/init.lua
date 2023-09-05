@@ -1,4 +1,3 @@
-require('install-plugins')
-require('settings')
-require('plugins-setup')
-require('mappings')
+require("plugins_install")
+require("colorscheme")
+require("remap");
