@@ -8,7 +8,11 @@ fi
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export PATH="$PATH:$HOME/bin" 
+
+export PATH="$HOME/bin:$PATH" 
+
+export CPATH=/opt/homebrew/include
+export LIBRARY_PATH=/opt/homebrew/lib
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -35,7 +39,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
-source $HOME/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/code/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
 # Use vim keys in tab complete menu:
