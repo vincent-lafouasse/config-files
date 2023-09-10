@@ -9,16 +9,22 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    "folke/which-key.nvim", {"folke/neoconf.nvim", cmd = "Neoconf"},
-    "folke/neodev.nvim", 'voldikss/vim-floaterm', {
+    "folke/which-key.nvim",
+	{"folke/neoconf.nvim", cmd = "Neoconf"},
+    "folke/neodev.nvim",
+	'voldikss/vim-floaterm',
+	{
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
-    }, {
+    },
+	{
         'nvim-telescope/telescope.nvim',
         tag = '0.1.2',
         dependencies = {'nvim-lua/plenary.nvim'}
-    }, {"catppuccin/nvim", name = "catppuccin", priority = 1000},
-    {'itchyny/lightline.vim'}, {
+    },
+	{"catppuccin/nvim", name = "catppuccin", priority = 1000},
+    {'itchyny/lightline.vim'},
+	{
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
         config = function()
@@ -37,7 +43,8 @@ require("lazy").setup({
                 indent = {enable = true}
             })
         end
-    }, {
+    },
+	{
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
         dependencies = {
