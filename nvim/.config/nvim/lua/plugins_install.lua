@@ -18,6 +18,12 @@ require("lazy").setup({
 
 	'voldikss/vim-floaterm',
 
+	{
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	},
+
+
 
 	{
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
