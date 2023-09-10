@@ -16,6 +16,9 @@ require("lazy").setup({
 	{ "folke/neoconf.nvim", cmd = "Neoconf" },
 	"folke/neodev.nvim",
 
+	'voldikss/vim-floaterm',
+
+
 	{
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		dependencies = { 'nvim-lua/plenary.nvim' }
