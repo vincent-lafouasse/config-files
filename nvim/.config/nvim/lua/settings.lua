@@ -18,3 +18,5 @@ vim.opt.gdefault = true
 vim.opt.cmdheight = 0
 vim.opt.errorbells = false
 vim.opt.swapfile = false
+vim.opt.updatetime = 750
+
