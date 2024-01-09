@@ -8,8 +8,13 @@ fi
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export PATH="$HOME/bin:$PATH" 
+
+LATEX_BIN='/usr/local/texlive/2023/bin/universal-darwin'
+export PATH="$PATH:$LATEX_BIN" 
+
+export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
@@ -71,3 +76,7 @@ unset __conda_setup
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+alias francinette=/Users/poss/francinette/tester.sh
+
+alias paco=/Users/poss/francinette/tester.sh

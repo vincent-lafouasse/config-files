@@ -59,4 +59,6 @@ require("lazy").setup({
         }
     },
 	'airblade/vim-gitgutter',
+
+	'42Paris/42Header',
 })
