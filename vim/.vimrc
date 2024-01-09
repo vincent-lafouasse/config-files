@@ -1,31 +1,25 @@
-set number
-set relativenumber
-set noerrorbells
-set smartindent
-set expandtab
-set noswapfile
+" to install the package manager :
+" run `curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim`
+" then run the vim command `:PlugInstall` to install plugins
 
-set wrap
-
-set backspace=indent,eol,start
 colo default
 syntax on
-set ts=4
-set sts=4
-set sw=0
-:set mouse=a
-:map <F2> :let @/=""
-:map <F3> :set nonumber
-:map <F4> :set number
-:map <F5> :w !sudo tee %
 
+set number
+set mouse=a
+set backspace=indent,eol,start
+
+set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set smartindent
+set smarttab
+
+set wrap
+set noerrorbells
+set noswapfile
 set noshowmode
-
 set laststatus=2
-
-set nobackup
-set undodir=$HOME/.vim/undodir
-set undofile
 set incsearch
 
 set colorcolumn=80
