@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+export LC_CTYPE=en_US.UTF-8
+
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -29,11 +31,13 @@ alias mv="mv -v"
 alias emacs='emacs -nw'
 alias please='sudo'
 alias fucking='sudo'
-alias vim='nvim'
+#alias vim='nvim'
 alias view='nvim -R'
 alias g='git'
 alias cppcheck='cppcheck --language=c++'
 alias ccheck='cppcheck --language=c'
+alias tmux="TERM=screen-256color-bce tmux"
+
 
 ### PLUGINS
 plugins=(
