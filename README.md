@@ -2,7 +2,7 @@
 
 branches:
 - `main`, my laptop
-- `linux-light`, a light-ish linux environment that still uses `zsh`
+- `linux-light`, a light-ish linux environment that still uses `zsh` but no `nvim`
 
 todo:
 - `env42`, a config specifically for my work session
