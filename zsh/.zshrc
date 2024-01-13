@@ -35,6 +35,9 @@ alias g='git'
 alias cppcheck='cppcheck --language=c++'
 alias ccheck='cppcheck --language=c'
 
+alias francinette=$HOME/francinette/tester.sh
+alias paco=$HOME/francinette/tester.sh
+
 ### PLUGINS
 plugins=(
     git
@@ -76,7 +79,3 @@ unset __conda_setup
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias francinette=/Users/poss/francinette/tester.sh
-
-alias paco=/Users/poss/francinette/tester.sh
