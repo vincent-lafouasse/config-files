@@ -26,10 +26,11 @@ alias g='git'
 alias cppcheck='cppcheck --language=c++'
 alias ccheck='cppcheck --language=c'
 alias tmux="TERM=screen-256color-bce tmux"
-
 alias francinette=/Users/poss/francinette/tester.sh
 alias paco=/Users/poss/francinette/tester.sh
 
+# in case i missed a reference
+alias nvim=vim
 
 ### PLUGINS
 plugins=(
