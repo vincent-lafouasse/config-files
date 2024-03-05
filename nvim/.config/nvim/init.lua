@@ -664,6 +664,7 @@ require('lazy').setup {
       vim.cmd.hi 'Comment gui=none'
     end,
   },
+  'itchyny/lightline.vim',
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -748,6 +749,12 @@ require('lazy').setup {
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
   -- { import = 'custom.plugins' },
 }
+
+-- colorscheme + statusline
+vim.opt.termguicolors = true
+vim.g.lightline = { colorscheme = 'catppuccin' }
+vim.opt.showmode = false
+vim.opt.background = 'dark'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
