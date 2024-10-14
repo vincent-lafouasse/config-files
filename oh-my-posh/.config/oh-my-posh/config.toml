@@ -39,13 +39,20 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     # change color depending on last command status
     foreground_templates = [
-      "{{if gt .Code 0}}red{{end}}",
-      "{{if eq .Code 0}}magenta{{end}}",
+      "{{if gt .Code 0}}p:red{{end}}",
+      "{{if eq .Code 0}}p:green{{end}}",
     ]
     background = 'transparent'
     template = '❯'
 
 [palette]
-  blue = "#89B4FA"
-  pink = "#F5C2E7"
-  lavender = "#B4BEFE"
+  black = "#45475A"   # surface1
+  blue = "#89b4fa"    # blue
+  cyan = "#94E2D5"    # teal
+  green = "#A6E3A1"   # green
+  magenta = "#F5C2E7" # pink
+  orange = "#fab387"  # peach
+  purple = "#cba6f7"  # mauve
+  red = "#F38BA8"     # red
+  white = "#BAC2DE"   # subtext1
+  yellow = "#F9E2AF"  # yellow
