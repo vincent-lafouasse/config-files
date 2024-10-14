@@ -16,26 +16,18 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     [blocks.segments.properties]
     style = "full"
     home_icon = "~"
-    folder_icon = "..\ue5fe.."
 
   [[blocks.segments]]
-    type = 'git'
-    style = 'plain'
-    template = "{{ .HEAD }} "
-    background = "transparent"
+  type = "git"
+  style = "powerline"
+  foreground = "p:lavender"
+  background = "transparent"
+  template = "{{ .HEAD }}"
 
-    [blocks.segments.properties]
-    branch_icon = "\ue725 "
-    cherry_pick_icon = "\ue29b "
-    commit_icon = "\uf417 "
-    fetch_status = false
-    fetch_upstream_icon = false
-    merge_icon = "\ue727 "
-    no_commits_icon = "\uf0c3 "
-    rebase_icon = "\ue728 "
-    revert_icon = "\uf0e2 "
-    tag_icon = "\uf412 "
-
+  [block.segments.properties]
+  fetch_status = true
+  fetch_upstream_icon = true
+  source = "cli"
 
 [[blocks]]
   type = 'prompt'
@@ -54,8 +46,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = '❯'
 
 [palette]
-  os = "#ACB0BE"
-  closer = "p:os"
+  blue = "#89B4FA"
   pink = "#F5C2E7"
   lavender = "#B4BEFE"
-  blue = "#89B4FA"
