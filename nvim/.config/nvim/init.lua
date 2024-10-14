@@ -556,6 +556,14 @@ require('lazy').setup {
   },
   --]]
 
+  { 
+    'martineausimon/nvim-lilypond-suite',
+    config = function()
+      require('nvls').setup({
+        -- edit config here (see "Customize default settings" in wiki)
+      })
+    end
+  },
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
