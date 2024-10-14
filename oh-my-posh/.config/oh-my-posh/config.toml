@@ -36,12 +36,17 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     revert_icon = "\uf0e2 "
     tag_icon = "\uf412 "
 
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    template = '❯ '
-    foreground = "p:closer"
-    background = "transparent"
+    background = 'transparent'
+    template = '❯'
 
 [palette]
   os = "#ACB0BE"
