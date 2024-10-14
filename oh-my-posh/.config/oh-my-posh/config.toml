@@ -11,18 +11,21 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     template = "{{.Icon}} "
     foreground = "p:os"
+    background = "transparent"
 
   [[blocks.segments]]
     type = 'session'
     style = 'plain'
     template = "{{ .UserName }}@{{ .HostName }} "
     foreground = "p:blue"
+    background = "transparent"
 
   [[blocks.segments]]
     type = 'path'
     style = 'plain'
     template = "{{ .Path }} "
     foreground = 'p:pink'
+    background = "transparent"
 
     [blocks.segments.properties]
     style = "full"
@@ -33,6 +36,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = 'git'
     style = 'plain'
     template = "{{ .HEAD }} "
+    background = "transparent"
 
     [blocks.segments.properties]
     branch_icon = "\ue725 "
@@ -51,6 +55,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     template = "\uf105"
     foreground = "p:closer"
+    background = "transparent"
 
 [palette]
   os = "#ACB0BE"
