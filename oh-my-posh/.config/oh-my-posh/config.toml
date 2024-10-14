@@ -22,7 +22,12 @@ console_title_template = '{{ .Folder }}'
   style = "powerline"
   foreground = "p:lavender"
   background = "transparent"
-  template = "{{ .HEAD }}"
+  template = """\
+             {{ .HEAD }}\
+             {{if .BranchStatus }} {{ .BranchStatus }}{{ end }}\
+             {{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}\
+             {{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}\
+             {{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"""
 
   [block.segments.properties]
   fetch_status = true
