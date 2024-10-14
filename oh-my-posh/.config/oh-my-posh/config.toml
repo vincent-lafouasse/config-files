@@ -53,7 +53,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'text'
     style = 'plain'
-    template = "\uf105"
+    template = '❯ '
     foreground = "p:closer"
     background = "transparent"
 
