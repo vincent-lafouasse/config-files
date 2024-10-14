@@ -9,6 +9,7 @@ fi
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/bin:$PATH" 
+export PATH="$PATH:/opt/homebrew/bin" 
 
 LATEX_BIN='/usr/local/texlive/2023/bin/universal-darwin'
 export PATH="$PATH:$LATEX_BIN" 
