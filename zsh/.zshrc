@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -47,9 +40,12 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 source $HOME/code/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.toml)"
+fi
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
