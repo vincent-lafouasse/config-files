@@ -14,26 +14,26 @@ console_title_template = '{{ .Folder }}'
     background = "transparent"
 
     [blocks.segments.properties]
-    style = "full"
-    home_icon = "~"
+      style = "full"
+      home_icon = "~"
 
   [[blocks.segments]]
-  type = "git"
-  style = "powerline"
-  foreground = "p:green"
-  background = "tranparent"
-  background_templates = [
-    "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
-    "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
-    "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
-    "{{ if gt .Behind 0 }}#B388FB{{ end }}"
-  ]
-  template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
+    type = "git"
+    style = "powerline"
+    foreground = "p:green"
+    background = "tranparent"
+    background_templates = [
+      "{{ if or (.Working.Changed) (.Staging.Changed) }}#FFEB3B{{ end }}",
+      "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#FFCC80{{ end }}",
+      "{{ if gt .Ahead 0 }}#B388FF{{ end }}",
+      "{{ if gt .Behind 0 }}#B388FB{{ end }}"
+    ]
+    template = "{{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }}  {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}  {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}"
 
     [block.segments.properties]
-    fetch_status = true
-    fetch_upstream_icon = true
-    source = "cli"
+      fetch_status = true
+      fetch_upstream_icon = true
+      source = "cli"
 
 [[blocks]]
   type = 'prompt'
