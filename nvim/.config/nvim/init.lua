@@ -760,6 +760,8 @@ require('lazy').setup {
   -- { import = 'custom.plugins' },
 }
 
+vim.treesitter.language.register('cpp', { 'tpp', 'cpp', 'hpp', })
+
 -- colorscheme + statusline
 vim.opt.termguicolors = true
 vim.g.lightline = { colorscheme = 'catppuccin' }
