@@ -7,20 +7,6 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   alignment = 'left'
 
   [[blocks.segments]]
-    type = 'os'
-    style = 'plain'
-    template = "{{.Icon}} "
-    foreground = "p:os"
-    background = "transparent"
-
-  [[blocks.segments]]
-    type = 'session'
-    style = 'plain'
-    template = "{{ .UserName }}@{{ .HostName }} "
-    foreground = "p:blue"
-    background = "transparent"
-
-  [[blocks.segments]]
     type = 'path'
     style = 'plain'
     template = "{{ .Path }} "
