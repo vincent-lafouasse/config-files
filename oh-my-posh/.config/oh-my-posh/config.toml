@@ -25,9 +25,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     foreground = 'p:pink'
 
     [blocks.segments.properties]
+    style = "full"
     home_icon = "~"
     folder_icon = "..\ue5fe.."
-    style = "agnoster_short"
 
   [[blocks.segments]]
     type = 'git'
