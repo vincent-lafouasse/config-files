@@ -10,7 +10,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     type = 'path'
     style = 'plain'
     template = "{{ .Path }} "
-    foreground = 'p:pink'
+    foreground = 'p:blue'
     background = "transparent"
 
     [blocks.segments.properties]
