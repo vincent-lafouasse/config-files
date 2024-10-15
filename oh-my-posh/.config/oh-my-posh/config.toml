@@ -17,6 +17,8 @@ console_title_template = '{{ .Folder }}'
       style = "full"
       home_icon = "~"
 
+# git segment should look like
+# master(green) ⇣42⇡42 *42(green) merge(depends) ~42(red) +42(yellow) !42(yellow) ?42(blue)
   [[blocks.segments]]
     type = "git"
     style = "plain"
