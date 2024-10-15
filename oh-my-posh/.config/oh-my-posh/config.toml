@@ -36,7 +36,7 @@ console_title_template = '{{ .Folder }}'
     style = "plain"
     foreground = "p:blue"
     background = "tranparent"
-    template = """ {{ if .Working.Changed }} \uF044 {{ .Working.String }}{{ end }}"""
+    template = """ {{ if .Working.Changed }} {{ .Working.String }}{{ end }}"""
 
     [blocks.segments.properties]
       branch_icon = ""
@@ -50,21 +50,7 @@ console_title_template = '{{ .Folder }}'
     style = "plain"
     foreground = "p:red"
     background = "tranparent"
-    template = """ {{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}"""
-
-    [blocks.segments.properties]
-      branch_icon = ""
-      fetch_stash_count = true
-      fetch_status = true
-      fetch_upstream_icon = true
-      fetch_worktree_count = true
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:magenta"
-    background = "tranparent"
-    template = """ {{ if .Staging.Changed }} \uF046 {{ .Staging.String }}{{ end }}"""
+    template = """ {{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}"""
 
     [blocks.segments.properties]
       branch_icon = ""
