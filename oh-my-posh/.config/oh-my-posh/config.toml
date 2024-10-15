@@ -46,9 +46,29 @@ console_title_template = '{{ .Folder }}'
   [[blocks.segments]]
     type = "git"
     style = "plain"
-    foreground = "p:blue"
+    foreground = "p:pink"
     background = "tranparent"
-    template = """{{ if .Working.Changed }} {{ .Working.String }}{{ end }}"""
+    template = """{{ if .Staging.Changed }} <{{ .Staging.String }}>{{ end }}"""
+
+    [blocks.segments.properties]
+      fetch_status = true
+
+  [[blocks.segments]]
+    type = "git"
+    style = "plain"
+    foreground = "p:yellow"
+    background = "tranparent"
+    template = """{{if gt .Staging.Modified 0}} +{{add .Staging.Modified 0}}{{end}}"""
+
+    [blocks.segments.properties]
+      fetch_status = true
+
+  [[blocks.segments]]
+    type = "git"
+    style = "plain"
+    foreground = "p:yellow"
+    background = "tranparent"
+    template = """{{if gt .Working.Modified 0}} !{{ .Working.Modified }}{{end}}"""
 
     [blocks.segments.properties]
       fetch_status = true
