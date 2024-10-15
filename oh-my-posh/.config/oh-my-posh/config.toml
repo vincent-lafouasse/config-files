@@ -41,24 +41,17 @@ console_title_template = '{{ .Folder }}'
       branch_identical_icon = ""
       branch_ahead_icon = "⇡"
       branch_behind_icon = "⇣"
-      fetch_stash_count = true
       fetch_status = true
-      fetch_upstream_icon = true
-      fetch_worktree_count = true
 
   [[blocks.segments]]
     type = "git"
     style = "plain"
     foreground = "p:blue"
     background = "tranparent"
-    template = """ {{ if .Working.Changed }} {{ .Working.String }}{{ end }}"""
+    template = """{{ if .Working.Changed }} {{ .Working.String }}{{ end }}"""
 
     [blocks.segments.properties]
-      branch_icon = ""
-      fetch_stash_count = true
       fetch_status = true
-      fetch_upstream_icon = true
-      fetch_worktree_count = true
 
   [[blocks.segments]]
     type = "git"
@@ -68,10 +61,7 @@ console_title_template = '{{ .Folder }}'
     template = """{{if gt .Working.Untracked 0}} ?{{ .Working.Untracked }}{{end}}"""
 
     [blocks.segments.properties]
-      fetch_stash_count = true
       fetch_status = true
-      fetch_upstream_icon = true
-      fetch_worktree_count = true
 
 [[blocks]]
   type = 'prompt'
