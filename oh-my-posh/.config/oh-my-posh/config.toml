@@ -2,6 +2,7 @@ version = 2
 final_space = true
 console_title_template = '{{ .Folder }}'
 
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
@@ -58,7 +59,10 @@ console_title_template = '{{ .Folder }}'
     style = "plain"
     foreground = "p:yellow"
     background = "tranparent"
-    template = """{{if gt .Staging.Modified 0}} +{{add .Staging.Modified 0}}{{end}}"""
+    template = """\
+               {{ $staged := (add .Staging.Added .Staging.Modified) }}\
+               {{if gt $staged 0}} +{{ $staged }}{{end}}\
+               """
 
     [blocks.segments.properties]
       fetch_status = true
