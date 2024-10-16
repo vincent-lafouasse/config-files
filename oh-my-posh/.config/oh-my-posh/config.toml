@@ -60,7 +60,7 @@ console_title_template = '{{ .Folder }}'
     foreground = "p:yellow"
     background = "tranparent"
     template = """\
-               {{ $staged := (add .Staging.Added .Staging.Modified) }}\
+               {{ $staged := (add .Staging.Added .Staging.Deleted .Staging.Modified) }}\
                {{if gt $staged 0}} +{{ $staged }}{{end}}\
                """
 
