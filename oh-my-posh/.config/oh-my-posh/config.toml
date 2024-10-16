@@ -47,9 +47,9 @@ console_title_template = '{{ .Folder }}'
   [[blocks.segments]]
     type = "git"
     style = "plain"
-    foreground = "p:pink"
+    foreground = "p:yellow"
     background = "tranparent"
-    template = """{{ if .Staging.Changed }} <{{ .Staging.String }}>{{ end }}"""
+    template = """{{if gt .StashCount 0}} *{{ .StashCount }}{{end}}"""
 
     [blocks.segments.properties]
       fetch_status = true
