@@ -43,10 +43,11 @@ source $ZSH/oh-my-zsh.sh
 source $HOME/code/misc/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
 
-#if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-#    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.toml)"
-#fi
-eval "$(starship init bash)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/config.toml)"
+fi
+#eval "$(starship init bash)"
+
 
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
