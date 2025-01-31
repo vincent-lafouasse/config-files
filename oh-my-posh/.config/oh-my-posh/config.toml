@@ -1,90 +1,92 @@
-version = 2
-final_space = true
 console_title_template = '{{ .Folder }}'
+version = 3
+final_space = true
 
+[palette]
+  black = '#45475A'
+  blue = '#89b4fa'
+  cyan = '#94E2D5'
+  green = '#A6E3A1'
+  magenta = '#F5C2E7'
+  orange = '#fab387'
+  purple = '#cba6f7'
+  red = '#F38BA8'
+  white = '#BAC2DE'
+  yellow = '#F9E2AF'
 
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
+    template = '{{ .Path }} '
+    foreground = 'p:blue'
+    background = 'transparent'
     type = 'path'
     style = 'plain'
-    template = "{{ .Path }} "
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      home_icon = '~'
+      style = 'full'
+
+  [[blocks.segments]]
+    template = '{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}'
+    foreground = 'p:green'
+    background = 'tranparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      branch_ahead_icon = '⇡'
+      branch_behind_icon = '⇣'
+      branch_icon = ''
+      branch_identical_icon = ''
+      cache_duration = 'none'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = '{{if gt .StashCount 0}} *{{ .StashCount }}{{end}}'
+    foreground = 'p:yellow'
+    background = 'tranparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = '{{ $staged := (add .Staging.Added .Staging.Deleted .Staging.Modified) }}{{if gt $staged 0}} +{{ $staged }}{{end}}'
+    foreground = 'p:yellow'
+    background = 'tranparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = '{{if gt .Working.Modified 0}} !{{ .Working.Modified }}{{end}}'
+    foreground = 'p:yellow'
+    background = 'tranparent'
+    type = 'git'
+    style = 'plain'
+
+    [blocks.segments.properties]
+      cache_duration = 'none'
+      fetch_status = true
+
+  [[blocks.segments]]
+    template = '{{if gt .Working.Untracked 0}} ?{{ .Working.Untracked }}{{end}}'
     foreground = 'p:blue'
-    background = "transparent"
+    background = 'tranparent'
+    type = 'git'
+    style = 'plain'
 
     [blocks.segments.properties]
-      style = "full"
-      home_icon = "~"
-
-# git segment should look like
-# master(green) ⇣42⇡42 *42(green) merge(depends) ~42(red) +42(yellow) !42(yellow) ?42(blue)
-# | master  | remote tracking branch; only shown if different from local branch
-# | ⇣42     | this many commits behind the remote
-# | ⇡42     | this many commits ahead of the remote
-# | *42     | this many stashes
-# | merge   | repository state
-# | ~42     | this many merge conflicts
-# | +42     | this many staged changes
-# | !42     | this many unstaged changes
-# | ?42     | this many untracked files
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:green"
-    background = "tranparent"
-    template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}"
-
-    [blocks.segments.properties]
-      branch_icon = ""
-      branch_identical_icon = ""
-      branch_ahead_icon = "⇡"
-      branch_behind_icon = "⇣"
-      fetch_status = true
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:yellow"
-    background = "tranparent"
-    template = """{{if gt .StashCount 0}} *{{ .StashCount }}{{end}}"""
-
-    [blocks.segments.properties]
-      fetch_status = true
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:yellow"
-    background = "tranparent"
-    template = """\
-               {{ $staged := (add .Staging.Added .Staging.Deleted .Staging.Modified) }}\
-               {{if gt $staged 0}} +{{ $staged }}{{end}}\
-               """
-
-    [blocks.segments.properties]
-      fetch_status = true
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:yellow"
-    background = "tranparent"
-    template = """{{if gt .Working.Modified 0}} !{{ .Working.Modified }}{{end}}"""
-
-    [blocks.segments.properties]
-      fetch_status = true
-
-  [[blocks.segments]]
-    type = "git"
-    style = "plain"
-    foreground = "p:blue"
-    background = "tranparent"
-    template = """{{if gt .Working.Untracked 0}} ?{{ .Working.Untracked }}{{end}}"""
-
-    [blocks.segments.properties]
+      cache_duration = 'none'
       fetch_status = true
 
 [[blocks]]
@@ -93,24 +95,11 @@ console_title_template = '{{ .Folder }}'
   newline = true
 
   [[blocks.segments]]
+    template = '❯'
+    background = 'transparent'
     type = 'text'
     style = 'plain'
-    # change color depending on last command status
-    foreground_templates = [
-      "{{if gt .Code 0}}p:red{{end}}",
-      "{{if eq .Code 0}}p:green{{end}}",
-    ]
-    background = 'transparent'
-    template = '❯'
+    foreground_templates = ['{{if gt .Code 0}}p:red{{end}}', '{{if eq .Code 0}}p:green{{end}}']
 
-[palette]
-  black = "#45475A"   # surface1
-  blue = "#89b4fa"    # blue
-  cyan = "#94E2D5"    # teal
-  green = "#A6E3A1"   # green
-  magenta = "#F5C2E7" # pink
-  orange = "#fab387"  # peach
-  purple = "#cba6f7"  # mauve
-  red = "#F38BA8"     # red
-  white = "#BAC2DE"   # subtext1
-  yellow = "#F9E2AF"  # yellow
+    [blocks.segments.properties]
+      cache_duration = 'none'
