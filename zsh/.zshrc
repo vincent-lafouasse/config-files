@@ -13,6 +13,9 @@ export PATH="$JAVA_HOME/bin:$PATH"
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
+export CPATH=$CPATH:/opt/homebrew/Cellar/readline/8.2.13/include
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/readline/8.2.13/lib
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -86,3 +89,4 @@ unset __conda_setup
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/poss/.opam/opam-init/init.zsh' ]] || source '/Users/poss/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+export PATH=/Users/poss/.local/funcheck/host:$PATH
