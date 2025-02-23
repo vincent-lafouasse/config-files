@@ -21,15 +21,17 @@ map <leader>kk <c-w>k
 
 map <leader>HH <Action>(ToggleDistractionFreeMode)
 map <leader>HP <Action>(TogglePresentationMode)
-map <leader>ht <Action>(HideAllWindows)
+map <leader>ht <Action>(HideActiveWindow)
 
 map <leader>tt <Action>(ActivateTerminalToolWindow)
 
 map <leader>ss <Action>(SearchEverywhere)
+map <leader>sf <Action>(GotoFile)
+map <leader>sg <Action>(GotoSymbol)
 
 map gn <Action>(GotoNextError)
 map gp <Action>(GotoPreviousError)
 
 " gd already goes to definition
-map gi <Action>(GoToImplementation)
+map gi <Action>(GotoImplementation)
 map U <C-R>
