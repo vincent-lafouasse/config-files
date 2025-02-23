@@ -31,9 +31,6 @@ alias view='nvim -R'
 alias g='git'
 alias ccheck='cppcheck --language=c'
 
-alias francinette=$HOME/francinette/tester.sh
-alias paco=$HOME/francinette/tester.sh
-
 ### PLUGINS
 plugins=(
     git
