@@ -152,6 +152,8 @@ require('lazy').setup {
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'voldikss/vim-floaterm', -- Floating terminal
   '42Paris/42Header',
+  'ziglang/zig.vim',
+  'luisjure/csound-vim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -474,6 +476,7 @@ require('lazy').setup {
         --
 
         clangd = {},
+        zls = {},
         rust_analyzer = {},
         lua_ls = {
           -- cmd = {...},
@@ -482,6 +485,10 @@ require('lazy').setup {
           settings = {
             Lua = {
               runtime = { version = 'LuaJIT' },
+              diagnostics = {
+                -- stop complaining about `undefined global vim`
+                globals = {'vim'}
+              },
               workspace = {
                 checkThirdParty = false,
                 -- Tells lua_ls where to find all the Lua files that you have loaded
@@ -570,16 +577,11 @@ require('lazy').setup {
     dependencies = {
       -- Snippet Engine & its associated nvim-cmp source
       {
-        'L3MON4D3/LuaSnip',
-        build = (function()
-          -- Build Step is needed for regex support in snippets
-          -- This step is not supported in many windows environments
-          -- Remove the below condition to re-enable on windows
-          if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
-            return
-          end
-          return 'make install_jsregexp'
-        end)(),
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp"
       },
       'saadparwaiz1/cmp_luasnip',
 

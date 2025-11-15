@@ -13,8 +13,11 @@ export PATH="$JAVA_HOME/bin:$PATH"
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
-export CPATH=$CPATH:/opt/homebrew/Cellar/readline/8.2.13/include
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/readline/8.2.13/lib
+export CPATH=$CPATH:/opt/homebrew/Cellar/readline/8.3.1/include
+export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/readline/8.3.1/lib
+
+export PATH="$PATH:"'/Applications/Coq-Platform~8.20~2025.01.app/Contents/Resources/bin'
+export COQLIB="$(coqc -where | tr -d '\r')"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
