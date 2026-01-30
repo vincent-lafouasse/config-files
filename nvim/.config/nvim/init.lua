@@ -37,6 +37,15 @@ vim.opt.timeoutlen = 300
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
+-- folds
+vim.opt.foldlevel = 0         -- close folds by default
+vim.opt.foldlevelstart = 0    -- i said close folds
+vim.opt.foldopen = "search"   -- only open for / searches
+vim.opt.foldcolumn = "1"
+vim.api.nvim_set_hl(0, "FoldColumn", { link = "LineNr" })
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
 -- misc
 vim.opt.cmdheight = 0
 vim.opt.errorbells = false
