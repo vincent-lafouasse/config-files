@@ -155,9 +155,8 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins, you can run
 --    :Lazy update
 --
--- NOTE: Here is where you install your plugins.
+-- NOTE: plugin installs vvvvvvvvvvvvvv
 require('lazy').setup {
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'voldikss/vim-floaterm', -- Floating terminal
   'ziglang/zig.vim',
@@ -171,9 +170,6 @@ require('lazy').setup {
   --
   --  This is equivalent to:
   --    require('Comment').setup({})
-
-  -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
   -- options to `gitsigns.nvim`. This is equivalent to the following lua:
