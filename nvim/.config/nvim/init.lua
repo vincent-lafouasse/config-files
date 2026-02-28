@@ -136,6 +136,20 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.nc",
+  callback = function()
+    vim.bo.filetype = "nanoc"
+  end,
+})
+
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+  pattern = "*.ebnf",
+  callback = function()
+    vim.bo.filetype = "ebnf"
+  end,
+})
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -733,7 +747,7 @@ require('lazy').setup {
         ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc',  'latex'},
         -- Autoinstall languages that are not installed
         auto_install = true,
-        highlight = { enable = true },
+        highlight = { enable = true, disable = { "ebnf" }, },
         indent = { enable = true },
       }
 
