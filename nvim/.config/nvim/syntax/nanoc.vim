@@ -1,0 +1,1 @@
+/Users/poss/code/misc/NanoC/tooling/nanoc.vim
