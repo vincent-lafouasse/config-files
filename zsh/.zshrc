@@ -1,4 +1,5 @@
 ### PATH
+typeset -U PATH path
 export PATH="/usr/local/sbin:$PATH"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/bin:$PATH" 
@@ -13,20 +14,30 @@ export PATH="$JAVA_HOME/bin:$PATH"
 export CPATH=/opt/homebrew/include
 export LIBRARY_PATH=/opt/homebrew/lib
 
-export CPATH=$CPATH:/opt/homebrew/Cellar/readline/8.3.1/include
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/Cellar/readline/8.3.1/lib
-
 export PATH="$PATH:"'/Applications/Coq-Platform~8.20~2025.01.app/Contents/Resources/bin'
 export COQLIB="$(coqc -where | tr -d '\r')"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+export PROJECT_DIR="$HOME/.my_projects"
+proj() {
+        local dir
+        dir=$(cat "$PROJECT_DIR" |   \
+            fzf --prompt="project: " \
+            --height=40%             \
+            --layout reverse         \
+            --border                 \
+            --style minimal          \
+        )
+        dir="${dir/#\~/$HOME}"
+        [[ -n "$dir" ]] && cd "$dir"
+}
+
 # alias
 alias dl='youtube-dl'
 alias mp3dl='yt-dlp --extract-audio --audio-format mp3'
 alias mv="mv -v"
-alias emacs='emacs -nw'
 alias please='sudo'
 alias fucking='sudo'
 alias vim='nvim'
