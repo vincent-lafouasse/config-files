@@ -77,4 +77,3 @@ bindkey -v '^?' backward-delete-char
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/poss/.opam/opam-init/init.zsh' ]] || source '/Users/poss/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
-export PATH=/Users/poss/.local/funcheck/host:$PATH
